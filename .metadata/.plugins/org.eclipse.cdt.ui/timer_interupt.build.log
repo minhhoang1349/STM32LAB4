@@ -1,0 +1,23 @@
+10:47:59 **** Incremental Build of configuration Debug for project timer_interupt ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -IC:/Users/taitr/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/taitr/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/taitr/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/taitr/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "timer_interupt.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\taitr\OneDrive\Documents\MCU\Lab4\timer_interupt\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="timer_interupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: timer_interupt.elf
+ 
+arm-none-eabi-size   timer_interupt.elf 
+arm-none-eabi-objdump -h -S  timer_interupt.elf  > "timer_interupt.list"
+arm-none-eabi-objcopy  -O ihex  timer_interupt.elf  "timer_interupt.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7732	     20	   2452	  10204	   27dc	timer_interupt.elf
+arm-none-eabi-objcopy  -O binary  timer_interupt.elf  "timer_interupt.bin"
+Finished building: default.size.stdout
+ 
+Finished building: timer_interupt.hex
+Finished building: timer_interupt.bin
+ 
+Finished building: timer_interupt.list
+ 
+ 
+
+10:48:00 Build Finished. 0 errors, 0 warnings. (took 1s.22ms)
+

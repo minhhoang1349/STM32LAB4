@@ -1,0 +1,2 @@
+../Core/Src/global.c:12:6:update_time	4	static
+../Core/Src/global.c:16:5:get_time	4	static
